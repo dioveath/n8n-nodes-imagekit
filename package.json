@@ -38,7 +38,8 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "nodes": [
-      "dist/nodes/ImageTool/ImageTool.node.js"
+      "dist/nodes/ExampleNode/ExampleNode.node.js",
+      "dist/nodes/HttpBin/HttpBin.node.js"
     ]
   },
   "devDependencies": {
@@ -51,5 +52,10 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.83",
+    "@types/node": "^24.10.1",
+    "expr-eval": "^2.0.2"
   }
 }
