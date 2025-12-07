@@ -60,15 +60,13 @@ export class ImageKit implements INodeType {
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
 		usableAsTool: true,
-		properties: [
+		credentials: [
 			{
-				displayName: 'Base URL',
-				name: 'baseUrl',
-				type: 'string',
-				default: 'http://localhost:8000',
-				description: 'Base URL of the ImageKit API service',
+				name: 'imageKitApi',
 				required: true,
 			},
+		],
+		properties: [
 			{
 				displayName: 'Operation',
 				name: 'operation',
@@ -224,16 +222,18 @@ export class ImageKit implements INodeType {
 	methods = {
 		loadOptions: {
 			async getFonts(this: ILoadOptionsFunctions): Promise<INodePropertyOptions[]> {
-				const baseUrl = this.getCurrentNodeParameter('baseUrl', { extractValue: true }) as string;
+				const credentials = await this.getCredentials('imageKitApi') as {
+					baseUrl: string;
+				};
 				
-				if (!baseUrl) {
+				if (!credentials?.baseUrl) {
 					return [];
 				}
 
 				try {
 					const response = await this.helpers.httpRequest({
 						method: 'GET',
-						url: `${baseUrl}/api/v1/fonts/`,
+						url: `${credentials.baseUrl}/api/v1/fonts/`,
 						headers: {
 							Accept: 'application/json',
 						},
@@ -280,10 +280,15 @@ export class ImageKit implements INodeType {
 		const items = this.getInputData();
 		const returnData: INodeExecutionData[] = [];
 
+		// Get credentials once before the loop
+		const credentials = await this.getCredentials('imageKitApi') as {
+			baseUrl: string;
+		};
+		const baseUrl = credentials.baseUrl;
+
 		for (let i = 0; i < items.length; i++) {
 			try {
 				const operation = this.getNodeParameter('operation', i) as string;
-				const baseUrl = this.getNodeParameter('baseUrl', i) as string;
 
 				if (operation === 'compositeHtmlImage') {
 					// Get HTML content
