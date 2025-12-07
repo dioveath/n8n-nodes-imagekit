@@ -43,7 +43,6 @@ export const compositeHtmlImageProperties: INodeProperties[] = [
 				useImage: [true],
 			},
 		},
-		required: false,
 	},
 	{
 		displayName: 'Output Format',
@@ -124,14 +123,14 @@ export const compositeHtmlImageProperties: INodeProperties[] = [
 				name: 'font',
 				values: [
 					{
-						displayName: 'Font',
-						name: 'font',
+						displayName: 'Font Name or ID',
+						name: 'fontId',
 						type: 'options',
 						typeOptions: {
 							loadOptionsMethod: 'getFonts',
 						},
 						default: '',
-						description: 'Select a font from available fonts',
+						description: 'Choose from the list of available fonts. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
 					},
 				],
 			},

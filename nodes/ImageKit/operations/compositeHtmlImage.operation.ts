@@ -60,9 +60,9 @@ export async function executeCompositeHtmlImage(
 
 	if (fonts.font && Array.isArray(fonts.font)) {
 		for (const fontEntry of fonts.font as IDataObject[]) {
-			if (fontEntry.font) {
+			if (fontEntry.fontId) {
 				try {
-					const fontData = JSON.parse(fontEntry.font as string) as FontMetadata;
+					const fontData = JSON.parse(fontEntry.fontId as string) as FontMetadata;
 					localFonts.push({
 						family: fontData.family,
 						style: fontData.style,

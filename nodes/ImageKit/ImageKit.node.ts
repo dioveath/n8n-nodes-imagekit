@@ -6,8 +6,8 @@ import type {
 } from 'n8n-workflow';
 import { NodeConnectionType, NodeOperationError } from 'n8n-workflow';
 import { getFonts } from './listSearch/getFonts';
-import { executeCompositeHtmlImage } from './operations/compositeHtmlImage';
-import { executeListFonts } from './operations/listFonts';
+import { executeCompositeHtmlImage } from './operations/compositeHtmlImage.operation';
+import { executeListFonts } from './operations/listFonts.operation';
 import { operationFields } from './properties';
 import type { ImageKitCredentials } from './types';
 
