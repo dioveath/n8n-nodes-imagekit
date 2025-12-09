@@ -12,7 +12,7 @@ export const listBackgroundModelsProperties: INodeProperties[] = [
 				operation: ['listBackgroundModels'],
 			},
 		},
-		description: 'This operation has no additional fields.',
+		description: 'This operation has no additional fields',
 	},
 ];
 

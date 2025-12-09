@@ -10,6 +10,7 @@ export const operationFields: INodeProperties[] = [
 		displayName: 'Resource',
 		name: 'resource',
 		type: 'options',
+		noDataExpression: true,
 		options: [
 			{ name: 'Image', value: 'image' },
 			{ name: 'Face', value: 'face' },
@@ -29,11 +30,11 @@ export const operationFields: INodeProperties[] = [
 				displayOptions: { show: { resource: ['image'] } },
 			},
 			{
-				name: 'List Fonts',
-				value: 'listFonts',
-				action: 'List available fonts',
-				displayOptions: { show: { resource: ['image'] } },
-			},
+				name: 'Crop Face',
+				value: 'cropFace',
+				action: 'Crop face from image',
+				displayOptions: { show: { resource: ['face'] } },
+			},			
 			{
 				name: 'Detect Faces',
 				value: 'detectFaces',
@@ -41,15 +42,15 @@ export const operationFields: INodeProperties[] = [
 				displayOptions: { show: { resource: ['face'] } },
 			},
 			{
-				name: 'Crop Face',
-				value: 'cropFace',
-				action: 'Crop face from image',
-				displayOptions: { show: { resource: ['face'] } },
-			},
-			{
 				name: 'List Background Models',
 				value: 'listBackgroundModels',
 				action: 'List background models',
+				displayOptions: { show: { resource: ['image'] } },
+			},			
+			{
+				name: 'List Fonts',
+				value: 'listFonts',
+				action: 'List available fonts',
 				displayOptions: { show: { resource: ['image'] } },
 			},
 			{

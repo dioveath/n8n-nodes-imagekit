@@ -17,14 +17,14 @@ export const removeBackgroundProperties: INodeProperties[] = [
 		required: true,
 	},
 	{
-		displayName: 'Model',
+		displayName: 'Model Name or ID',
 		name: 'model',
 		type: 'options',
 		typeOptions: {
 			loadOptionsMethod: 'getBackgroundModels',
 		},
-		default: 'u2net',
-		description: 'Background-removal model to use',
+		default: '',
+		description: 'Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>',
 		displayOptions: {
 			show: {
 				resource: ['image'],
