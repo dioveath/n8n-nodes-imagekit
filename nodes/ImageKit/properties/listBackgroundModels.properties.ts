@@ -8,6 +8,7 @@ export const listBackgroundModelsProperties: INodeProperties[] = [
 		default: '',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['listBackgroundModels'],
 			},
 		},

@@ -10,6 +10,7 @@ export const detectFacesProperties: INodeProperties[] = [
 		description: 'Name of the binary field containing the image',
 		displayOptions: {
 			show: {
+				resource: ['face'],
 				operation: ['detectFaces'],
 			},
 		},
@@ -28,6 +29,7 @@ export const detectFacesProperties: INodeProperties[] = [
 		description: 'Minimum confidence threshold for face detection (0-1)',
 		displayOptions: {
 			show: {
+				resource: ['face'],
 				operation: ['detectFaces'],
 			},
 		},

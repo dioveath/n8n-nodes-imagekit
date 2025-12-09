@@ -10,6 +10,7 @@ export const cropFaceProperties: INodeProperties[] = [
 		description: 'Name of the binary field containing the image',
 		displayOptions: {
 			show: {
+				resource: ['face'],
 				operation: ['cropFace'],
 			},
 		},
@@ -28,6 +29,7 @@ export const cropFaceProperties: INodeProperties[] = [
 		description: 'Minimum confidence threshold for face detection (0-1)',
 		displayOptions: {
 			show: {
+				resource: ['face'],
 				operation: ['cropFace'],
 			},
 		},
@@ -40,6 +42,7 @@ export const cropFaceProperties: INodeProperties[] = [
 		description: 'Width of the cropped image',
 		displayOptions: {
 			show: {
+				resource: ['face'],
 				operation: ['cropFace'],
 			},
 		},
@@ -52,6 +55,7 @@ export const cropFaceProperties: INodeProperties[] = [
 		description: 'Height of the cropped image',
 		displayOptions: {
 			show: {
+				resource: ['face'],
 				operation: ['cropFace'],
 			},
 		},
@@ -64,6 +68,7 @@ export const cropFaceProperties: INodeProperties[] = [
 		description: 'Whether to respect the aspect ratio when cropping',
 		displayOptions: {
 			show: {
+				resource: ['face'],
 				operation: ['cropFace'],
 			},
 		},

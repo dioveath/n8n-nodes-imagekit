@@ -10,6 +10,7 @@ export const removeBackgroundProperties: INodeProperties[] = [
 		description: 'Name of the binary field containing the image',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['removeBackground'],
 			},
 		},
@@ -26,6 +27,7 @@ export const removeBackgroundProperties: INodeProperties[] = [
 		description: 'Background-removal model to use',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['removeBackground'],
 			},
 		},

@@ -13,6 +13,7 @@ export const compositeHtmlImageProperties: INodeProperties[] = [
 		description: 'HTML content to overlay on the image',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['compositeHtmlImage'],
 			},
 		},
@@ -26,6 +27,7 @@ export const compositeHtmlImageProperties: INodeProperties[] = [
 		description: 'Whether to composite HTML on an existing image',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['compositeHtmlImage'],
 			},
 		},
@@ -39,6 +41,7 @@ export const compositeHtmlImageProperties: INodeProperties[] = [
 		description: 'Name of the binary field containing the image',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['compositeHtmlImage'],
 				useImage: [true],
 			},
@@ -57,6 +60,7 @@ export const compositeHtmlImageProperties: INodeProperties[] = [
 		description: 'Output image format',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['compositeHtmlImage'],
 			},
 		},
@@ -69,6 +73,7 @@ export const compositeHtmlImageProperties: INodeProperties[] = [
 		description: 'Output image width in pixels',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['compositeHtmlImage'],
 			},
 		},
@@ -81,6 +86,7 @@ export const compositeHtmlImageProperties: INodeProperties[] = [
 		description: 'Output image height in pixels',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['compositeHtmlImage'],
 			},
 		},
@@ -98,6 +104,7 @@ export const compositeHtmlImageProperties: INodeProperties[] = [
 		description: 'Device pixel ratio (1 = normal, 2 = retina, etc.)',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['compositeHtmlImage'],
 			},
 		},
@@ -114,6 +121,7 @@ export const compositeHtmlImageProperties: INodeProperties[] = [
 		description: 'Fonts to use for HTML rendering. Loads dynamically from the API.',
 		displayOptions: {
 			show: {
+				resource: ['image'],
 				operation: ['compositeHtmlImage'],
 			},
 		},

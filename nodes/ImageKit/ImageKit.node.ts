@@ -24,6 +24,7 @@ export class ImageKit implements INodeType {
 		group: ['transform'],
 		version: [1, 1],
 		description: 'HTML to Image conversion service with font support',
+		subtitle: '={{$parameter["resource"] + ": " + $parameter["operation"]}}',
 		defaults: {
 			name: 'Image Kit',
 		},
