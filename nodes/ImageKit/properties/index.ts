@@ -4,6 +4,7 @@ import { detectFacesProperties } from './detectFaces.properties';
 import { cropFaceProperties } from './cropFace.properties';
 import { listBackgroundModelsProperties } from './listBackgroundModels.properties';
 import { removeBackgroundProperties } from './removeBackground.properties';
+import { scaleProperties } from './scale.properties';
 
 export const operationFields: INodeProperties[] = [
 	{
@@ -34,7 +35,7 @@ export const operationFields: INodeProperties[] = [
 				value: 'cropFace',
 				action: 'Crop face from image',
 				displayOptions: { show: { resource: ['face'] } },
-			},			
+			},
 			{
 				name: 'Detect Faces',
 				value: 'detectFaces',
@@ -46,7 +47,7 @@ export const operationFields: INodeProperties[] = [
 				value: 'listBackgroundModels',
 				action: 'List background models',
 				displayOptions: { show: { resource: ['image'] } },
-			},			
+			},
 			{
 				name: 'List Fonts',
 				value: 'listFonts',
@@ -59,6 +60,12 @@ export const operationFields: INodeProperties[] = [
 				action: 'Remove image background',
 				displayOptions: { show: { resource: ['image'] } },
 			},
+			{
+				name: 'Scale Image',
+				value: 'scale',
+				action: 'Scale image',
+				displayOptions: { show: { resource: ['image'] } },
+			},
 		],
 		default: 'compositeHtmlImage',
 	},
@@ -67,5 +74,6 @@ export const operationFields: INodeProperties[] = [
 	...cropFaceProperties,
 	...listBackgroundModelsProperties,
 	...removeBackgroundProperties,
+	...scaleProperties,
 ];
 

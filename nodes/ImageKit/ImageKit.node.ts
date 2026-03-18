@@ -13,6 +13,7 @@ import { executeDetectFaces } from './operations/detectFaces.operation';
 import { executeCropFace } from './operations/cropFace.operation';
 import { executeListBackgroundModels } from './operations/listBackgroundModels.operation';
 import { executeRemoveBackground } from './operations/removeBackground.operation';
+import { executeScale } from './operations/scale.operation';
 import { operationFields } from './properties';
 import type { ImageKitCredentials } from './types';
 
@@ -76,6 +77,9 @@ export class ImageKit implements INodeType {
 					returnData.push(result);
 				} else if (operation === 'removeBackground') {
 					const result = await executeRemoveBackground.call(this, i, baseUrl);
+					returnData.push(result);
+				} else if (operation === 'scale') {
+					const result = await executeScale.call(this, i, baseUrl);
 					returnData.push(result);
 				}
 			} catch (error) {

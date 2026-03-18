@@ -94,3 +94,12 @@ export interface RemoveBackgroundResponse {
 	height: number;
 }
 
+export interface ImageScaleRequest {
+	image: string; // base64 encoded image
+	width?: number; // target width
+	height?: number; // target height
+	mode?: 'fit' | 'fill' | 'stretch';
+	output?: 'png' | 'jpeg' | 'webp';
+	webhook_url?: string;
+}
+
